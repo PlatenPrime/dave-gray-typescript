@@ -46,7 +46,7 @@ export default class ListTemplate implements DOMList {
 
 			check.addEventListener("change", () => {
 				item.checked = !item.checked
-				FullList.save()
+				fullList.save()
 			})
 
 
