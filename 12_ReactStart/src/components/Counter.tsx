@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {ReactNode} from 'react';
 
 
 type CounterProps = { 
