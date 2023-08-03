@@ -73,45 +73,100 @@ printId({ myId: 23234 })
 
 function welcomePeople(x: string[] | string) {
 	if (Array.isArray(x)) {
-	  // Here: 'x' is 'string[]'
-	  console.log("Hello, " + x.join(" and "));
+		// Here: 'x' is 'string[]'
+		console.log("Hello, " + x.join(" and "));
 	} else {
-	  // Here: 'x' is 'string'
-	  console.log("Welcome lone traveler " + x);
+		// Here: 'x' is 'string'
+		console.log("Welcome lone traveler " + x);
 	}
-  }
+}
 
 
-  welcomePeople(["Platen", "Prime"])
+welcomePeople(["Platen", "Prime"])
 
 
 
-  // Return type is inferred as number[] | string
+// Return type is inferred as number[] | string
 function getFirstThree(x: number[] | string) {
 	console.log(x.slice(0, 3));
-  }
+}
 
 
-  getFirstThree([1, 2, 3, 4, 5, 6, 7])
-  getFirstThree("ldjfgd")
+getFirstThree([1, 2, 3, 4, 5, 6, 7])
+getFirstThree("ldjfgd")
 
 
 
-  type Test = {
+type Test = {
 	x: number;
 	y: number;
-  };
+};
 
 
-  function printCoord(pt: Test) {
+function printCoordT(pt: Test) {
 	console.log(pt.x)
 	console.log(pt.y)
+}
+
+
+printCoordT({ x: 25, y: 25 })
+
+
+type NS = number | string
+
+
+
+interface Point {
+	x: number;
+	y: number;
+}
+
+function printCoordI(pt: Point) {
+	console.log("The coordinate's x value is " + pt.x);
+	console.log("The coordinate's y value is " + pt.y);
+}
+
+printCoordI({ x: 100, y: 100 });
+
+
+
+let changingString = "Hello World";
+changingString = "Olá Mundo";
+// Because `changingString` can represent any possible string, that
+// is how TypeScript describes it in the type system
+changingString;
+      
+
+ 
+const constantString = "Hello World";
+// Because `constantString` can only represent 1 possible string, it
+// has a literal type representation
+constantString;
+      
+
+const obj = { counter: 0 };
+if (true) {
+  obj.counter = 1;
+}
+
+
+// declare function handleRequest(url: string, method: "GET" | "POST"): void;
+
+// // // Change 1:
+// // const req = { url: "https://example.com", method: "GET" as "GET" };
+// // // Change 2
+// // handleRequest(req.url, req.method as "GET");
+
+// const req = { url: "https://example.com", method: "GET" } as const;
+// handleRequest(req.url, req.method);
+
+
+
+function liveDangerously(x?: number | null) {
+	// No error
+	console.log(x!.toFixed());
   }
 
 
-  printCoord({x: 25, y: 25})
-
-
-  type NS = number | string
-
-  
+  liveDangerously(10)
+  liveDangerously(5)
