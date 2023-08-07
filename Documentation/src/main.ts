@@ -114,6 +114,10 @@ printCoordT({ x: 25, y: 25 })
 
 type NS = number | string
 
+let lsakjgeio: NS = 5
+
+lsakjgeio++
+
 
 
 interface Point {
@@ -170,3 +174,14 @@ function liveDangerously(x?: number | null) {
 
   liveDangerously(10)
   liveDangerously(5)
+
+
+
+function padLeft(padding: number | string, input: string) {
+	if (typeof padding === "number") {
+		return " ".repeat(padding) + input;
+	}
+	return padding + input;
+}
+
+console.log(typeof !!"word")
