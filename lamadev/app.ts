@@ -46,7 +46,7 @@ let testNumberArray: number[]
 testNumberArray = [23, 34, 54]
 
 
-let testStringOrNumberArray : (string | number)[]
+let testStringOrNumberArray: (string | number)[]
 
 
 testStringOrNumberArray = [1, "two", 3]
@@ -57,7 +57,7 @@ testStringOrNumberArray = [1, "two", 3]
 let user = {
 	username: "John",
 	age: 23,
-	isAdmin : false
+	isAdmin: false
 }
 
 user.username = "jane"
@@ -65,4 +65,52 @@ user.username = "jane"
 // user.isAdmin = "no"
 user.isAdmin = true
 
-user.phone = "+233423"
+// user.phone = "+233423"
+
+
+let userObj: {
+	username: string,
+	age: number,
+	isAdmin: boolean,
+	phone: string
+}
+
+
+userObj = {
+	username: "john",
+	age: 45,
+	isAdmin: true,
+	phone: "34232"
+}
+
+let userObj2: {
+	username: string,
+	age: number,
+	isAdmin: boolean,
+	phone?: string
+}
+
+userObj2 = {
+	username: "Rina",
+	age: 29,
+	isAdmin: false,
+	
+}
+
+
+// ANY
+
+let testAny;
+
+testAny = 12;
+testAny = "twelve";
+testAny = true
+
+
+let testAnyArray : any[]
+
+
+testAnyArray = [1, "sfdsfs", {}]
+
+
+// FUNCTIONS 
