@@ -4,6 +4,7 @@ import Parent from './Parent'
 import Child from './Child'
 import SecondChild from './SecondChild'
 import EventExample from './EventExample'
+import UseStateExample from './UseStateExample'
 
 export default function Home() {
 	return (
@@ -13,6 +14,7 @@ export default function Home() {
 				<Child />
 				<SecondChild />
 				<EventExample />
+				<UseStateExample />
 			</Parent>
 		</>
 	)

@@ -11,9 +11,15 @@ function EventExample() {
 
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-console.log(e.target.value)
+		console.log(e.target.value)
 	}
 
+
+
+	const handleDelete = (id: number, e: React.MouseEvent<HTMLButtonElement>) => {
+		e.preventDefault()
+		console.log(id)
+	}
 
 	return (
 		<div>
@@ -24,12 +30,12 @@ console.log(e.target.value)
 			<form >
 				<h1>Lorem ipsum dolor sit amet.</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem porro, aut eaque ducimus harum neque quaerat cum sint dolorem ipsam aperiam alias quos at laborum, labore sequi voluptatibus deserunt odit!</p>
-				<button className='bg-red-600 p-1' >Delete</button>
+				<button className='bg-red-600 p-1' onClick={(e) => { handleDelete(1, e) }} >Delete</button>
 			</form>
 			<form >
 				<h1>Lorem ipsum dolor sit amet.</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem porro, aut eaque ducimus harum neque quaerat cum sint dolorem ipsam aperiam alias quos at laborum, labore sequi voluptatibus deserunt odit!</p>
-				<button className='bg-red-600 p-1' >Delete</button>
+				<button className='bg-red-600 p-1' onClick={(e) => { handleDelete(2, e) }} >Delete</button>
 			</form>
 		</div>
 	)
