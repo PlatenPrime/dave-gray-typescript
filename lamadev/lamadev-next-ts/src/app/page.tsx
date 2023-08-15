@@ -5,7 +5,9 @@ import Child from './Child'
 import SecondChild from './SecondChild'
 import EventExample from './EventExample'
 import UseStateExample from './UseStateExample'
-import UseContextExamle from './UseContextExample'
+import UseContextExample from './UseContextExample'
+import UseRefExample from './UseRefExample'
+import ItemList from './ItemList'
 
 export default function Home() {
 	return (
@@ -16,7 +18,10 @@ export default function Home() {
 				<SecondChild />
 				<EventExample />
 				<UseStateExample /> */}
-				<UseContextExamle/>
+				{/* 				
+				<UseRefExample /> */}
+				<ItemList />
+
 			</Parent>
 		</>
 	)
