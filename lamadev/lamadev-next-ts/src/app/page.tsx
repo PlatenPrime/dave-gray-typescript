@@ -5,16 +5,18 @@ import Child from './Child'
 import SecondChild from './SecondChild'
 import EventExample from './EventExample'
 import UseStateExample from './UseStateExample'
+import UseContextExamle from './UseContextExample'
 
 export default function Home() {
 	return (
 		<>
 			{/* <PostList /> */}
 			<Parent>
-				<Child />
+				{/* <Child />
 				<SecondChild />
 				<EventExample />
-				<UseStateExample />
+				<UseStateExample /> */}
+				<UseContextExamle/>
 			</Parent>
 		</>
 	)
